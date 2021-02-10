@@ -1,2 +1,2 @@
 # BlazorFocusIssue
-A demo project to demonstrate an issue appearing while using ElementReference.FocusAsync() and @onfocusin on an input element simultaneously.
+A demo project to demonstrate an issue that appears on using ElementReference.FocusAsync() and @onfocusin simultaneously in a custom input element.
