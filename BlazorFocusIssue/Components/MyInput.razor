@@ -1,0 +1,32 @@
+﻿@inherits InputText
+
+<input type="text"
+       @bind-value="CurrentValue"
+       @ref="_inputReference"
+       @onfocusin="FocusInHandler" />
+
+@code {
+    private ElementReference _inputReference;
+
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await SetFocus();
+        }
+
+        await base.OnAfterRenderAsync(firstRender);
+    }
+
+    public async Task SetFocus()
+    {
+        await _inputReference.FocusAsync();
+    }
+
+    async Task FocusInHandler(FocusEventArgs e)
+    {
+        // Issue appeares when @onfocusin is used
+    }
+
+
+}

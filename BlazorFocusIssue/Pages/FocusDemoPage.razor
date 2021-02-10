@@ -1,0 +1,13 @@
+﻿@page "/FocusIssue"
+
+<EditForm Model="model">
+    <MyInput @bind-Value="_testValue1" />
+</EditForm>
+
+@code {
+
+    private Object model = new { };
+
+    private string _testValue1;
+
+}
